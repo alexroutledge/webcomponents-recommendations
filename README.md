@@ -13,6 +13,6 @@ An example recommendations app built using web components.
 
 Example
 
-	```
-	<product-recommendations id="123"></product-recommendations>
-	```
+```
+  <product-recommendations id="123"></product-recommendations>
+```
