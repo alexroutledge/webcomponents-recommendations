@@ -1,0 +1,18 @@
+<polymer-element name="template-recommendations" attributes="object">
+ <template>
+   <template repeat="{{object}}">
+    <li class="btfrecommendation">
+      <a href="{{uri}}">
+        <div>
+          <img alt="{{title}}" width="93" height="113" src="{{img_uri}}"/>
+        </div>
+      </a>
+    </li>
+   </template>
+ </template>
+ <script>
+   Polymer('template-recommendations', {
+     applyAuthorStyles: true
+   });
+ </script>
+</polymer-element>

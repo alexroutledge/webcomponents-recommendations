@@ -1,0 +1,23 @@
+h4 {font-family:Arial;text-transform: uppercase;
+			display: table;
+			width: 197px;
+			height: 21px;
+			margin: 2px 25px 0 25px;
+			font-size: 1.0em;
+			color: #807d7d;
+			font-weight:normal;}
+		 	ul {padding:0 25px 10px 8px;
+			width: 200px;}
+		 	li {list-style-type: none;float: left;
+			margin: 0 2px 3px 0;
+			width: 95px;
+			height: 115px;
+			border: 1px solid #D5D5D5;
+			background: #fff;}
+                        a {display: block;
+			margin: 0 auto;}
+            .click_to_buy {
+              position:relative;
+              top:-60px;
+            }
+

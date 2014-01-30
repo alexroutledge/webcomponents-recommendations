@@ -1,0 +1,22 @@
+/*
+We can't style the element using existing CSS selectors as the element is encapsulated
+*/
+h4 {display:none;}
+/*
+The element can be styled via its part attribute
+*/
+product-recommendations::part(recommendations-title) {
+  color: blue;
+}
+/*
+The element's first level shadow DOM can be styled via the hat CSS selector
+*/
+product-recommendations ^ h4 {
+  color: red;
+}
+/*
+The element's nested shadow DOM levels can be styled via the cat CSS selector
+*/
+product-recommendations ^^ a {
+  opacity: 0.5;
+}

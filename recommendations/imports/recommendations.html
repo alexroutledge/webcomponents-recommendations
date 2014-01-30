@@ -1,0 +1,29 @@
+<link rel="import" href="http://dl.dropboxusercontent.com/u/8767938/fresca/html5/recommendations/imports/i18n-content.html"/>
+<link rel="import" href="http://dl.dropboxusercontent.com/u/8767938/fresca/html5/recommendations/imports/template-recommendations.html"/>
+<link rel="import" href="http://dl.dropboxusercontent.com/u/8767938/fresca/html5/recommendations/imports/polymer-ajax.html"/>
+<link rel="import" href="http://dl.dropboxusercontent.com/u/8767938/fresca/html5/recommendations/imports/polymer-xhr.html"/>
+
+<polymer-element name="product-recommendations">
+  <template>
+    <link rel="stylesheet" href="http://dl.dropboxusercontent.com/u/8767938/fresca/html5/polymer/css/recommendations.css"/>
+    <div id="product_relationships">
+      <h4 id="complete_look_heading" part="recommendations-title">
+        <i18n-content locale="en-GB" message="recommendations.title"></i18n-content>
+      </h4>
+      <div class="tab" id="ymal">
+        <div class="recommendationWrapper" id="categoryBestSeller">
+          <ul>
+            <template-recommendations object="{{response.query.results.json.payload}}"></template-recommendations>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <polymer-ajax auto url="http://query.yahooapis.com/v1/public/yql/alexroutledge/recommendations" params='{"format": "json", "diagnostics": "true"}' handleAs="json" response="{{response}}"></polymer-ajax>
+  </template>
+  <script>
+  Polymer('product-recommendations', {
+    applyAuthorStyles: false,
+    resetStyleInheritance: true
+  });
+  </script>
+</polymer-element>

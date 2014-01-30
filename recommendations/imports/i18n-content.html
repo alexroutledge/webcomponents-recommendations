@@ -1,0 +1,18 @@
+<polymer-element name="i18n-content" attributes="locale message">
+ <template>
+   <content>{{data}}</content>
+ </template>
+ <script src="http://dl.dropboxusercontent.com/u/8767938/fresca/html5/polymer-blog/js/i18next-1.7.1.js"></script>
+ <script>
+   Polymer('i18n-content', {
+     applyAuthorStyles: true,
+     ready: function() {
+       var _this = this;
+       i18n.init({ resGetPath: 'http://dl.dropboxusercontent.com/u/8767938/fresca/html5/recommendations/i18n/__ns__-__lng__.json', lng: _this.locale});
+       i18n.init(function(t) {
+         _this.data = i18n.t(_this.message);
+       });
+     }
+   });
+ </script>
+</polymer-element>
