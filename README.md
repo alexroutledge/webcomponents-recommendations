@@ -1,4 +1,4 @@
-# &lt;webcomponents-recommendations&gt;
+# webcomponents-recommendations
 
 An example recommendations app built using web components.
 
